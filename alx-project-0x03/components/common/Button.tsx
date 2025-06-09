@@ -1,5 +1,12 @@
 import { ButtonProps } from "./interfaces";
 
+const backgroundColors = {
+  red: 'bg-red-500',
+  blue: 'bg-blue-500',
+  orange: 'bg-orange-500',
+  green: 'bg-green-500',
+};
+
 const Button = ({
   buttonLabel,
   buttonSize = 'text-sm',
@@ -9,13 +16,6 @@ const Button = ({
   const backgroundColorClass = (buttonBackgroundColor as keyof typeof backgroundColors)
     ? backgroundColors[buttonBackgroundColor as keyof typeof backgroundColors]
     : 'bg-slate-500';
-
-  const backgroundColors = {
-    red: 'bg-red-500',
-    blue: 'bg-blue-500',
-    orange: 'bg-orange-500',
-    green: 'bg-green-500',
-  };
 
   return (
     <button
@@ -28,4 +28,3 @@ const Button = ({
 };
 
 export default Button;
-
